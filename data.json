@@ -1,2 +1,4 @@
-Undetected
-Green
+{
+  "text": "Привет из GitHub!",
+  "color": "#FF0000"
+}
