@@ -1,4 +1,5 @@
 {
   "status": "Updating",
-  "statuscolor": "#ff5e00"
+  "statuscolor": "#ff5e00",
+  "statusbutton": "off"
 }
