@@ -1,5 +1,5 @@
 {
-  "status": "Undetect BLYAT",
-  "statuscolor": "#47ff00",
-  "statusbutton": "on"
+  "status": "Detect",
+  "statuscolor": "#ff0002",
+  "statusbutton": "off"
 }
