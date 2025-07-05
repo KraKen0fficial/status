@@ -1,4 +1,6 @@
 {
   "text": "Detected",
-  "color": "#FF0000"
+  "color": "#FF0000",
+  "buttonstart": "off",
+  "version": "0.1"
 }
