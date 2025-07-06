@@ -1,5 +1,5 @@
 {
-  "status": "Disabled",
-  "statuscolor": "#4f4f4f",
-  "statusbutton": "off"
+  "status": "Testing",
+  "statuscolor": "#ff6a05",
+  "statusbutton": "on"
 }
