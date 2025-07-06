@@ -1,5 +1,5 @@
 {
-  "status": "Detect",
-  "statuscolor": "#ff0002",
-  "statusbutton": "off"
+  "status": "Testing",
+  "statuscolor": "#ff5300",
+  "statusbutton": "on"
 }
