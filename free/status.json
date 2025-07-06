@@ -1,5 +1,5 @@
 {
-  "status": "Undetect",
-  "statuscolor": "#32ff05",
-  "statusbutton": "on"
+  "status": "Disabled",
+  "statuscolor": "#4f4f4f",
+  "statusbutton": "off"
 }
