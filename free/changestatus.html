@@ -165,6 +165,10 @@
             <input type="text" id="repoName" placeholder="repository-name">
         </div>
         <div class="form-group">
+            <label for="repoPath">Path to files (e.g. 'free/'):</label>
+            <input type="text" id="repoPath" value="free/" placeholder="path/to/files/">
+        </div>
+        <div class="form-group">
             <label for="githubToken">GitHub Personal Access Token:</label>
             <input type="password" id="githubToken" placeholder="ghp_...">
             <small>Create a token with "repo" permissions at GitHub Settings > Developer settings</small>
@@ -192,10 +196,12 @@
         function loadGithubConfig() {
             const repoOwner = localStorage.getItem('repoOwner');
             const repoName = localStorage.getItem('repoName');
+            const repoPath = localStorage.getItem('repoPath');
             const githubToken = localStorage.getItem('githubToken');
             
             if (repoOwner) document.getElementById('repoOwner').value = repoOwner;
             if (repoName) document.getElementById('repoName').value = repoName;
+            if (repoPath) document.getElementById('repoPath').value = repoPath;
             if (githubToken) document.getElementById('githubToken').value = githubToken;
         }
 
@@ -203,10 +209,12 @@
         function saveGithubConfig() {
             const repoOwner = document.getElementById('repoOwner').value;
             const repoName = document.getElementById('repoName').value;
+            const repoPath = document.getElementById('repoPath').value;
             const githubToken = document.getElementById('githubToken').value;
             
             localStorage.setItem('repoOwner', repoOwner);
             localStorage.setItem('repoName', repoName);
+            localStorage.setItem('repoPath', repoPath);
             localStorage.setItem('githubToken', githubToken);
             
             alert('GitHub configuration saved!');
@@ -243,6 +251,7 @@
         async function updateStatusJson() {
             const repoOwner = document.getElementById('repoOwner').value;
             const repoName = document.getElementById('repoName').value;
+            const repoPath = document.getElementById('repoPath').value;
             const githubToken = document.getElementById('githubToken').value;
             
             if (!repoOwner || !repoName || !githubToken) {
@@ -264,7 +273,7 @@
                 const response = await updateGitHubFile(
                     repoOwner, 
                     repoName, 
-                    'status.json', 
+                    repoPath + 'status.json', 
                     JSON.stringify(jsonData, null, 2),
                     githubToken
                 );
@@ -281,6 +290,7 @@
         async function updateVersionJson() {
             const repoOwner = document.getElementById('repoOwner').value;
             const repoName = document.getElementById('repoName').value;
+            const repoPath = document.getElementById('repoPath').value;
             const githubToken = document.getElementById('githubToken').value;
             
             if (!repoOwner || !repoName || !githubToken) {
@@ -298,7 +308,7 @@
                 const response = await updateGitHubFile(
                     repoOwner, 
                     repoName, 
-                    'version.json', 
+                    repoPath + 'version.json', 
                     JSON.stringify(jsonData, null, 2),
                     githubToken
                 );
