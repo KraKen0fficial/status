@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Status Changer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .section {
+            margin-bottom: 30px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .json-display {
+            background-color: #f8f8f8;
+            padding: 10px;
+            border-radius: 4px;
+            font-family: monospace;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+        .status {
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 4px;
+            display: none;
+        }
+        .success {
+            background-color: #dff0d8;
+            color: #3c763d;
+            border: 1px solid #d6e9c6;
+        }
+        .error {
+            background-color: #f2dede;
+            color: #a94442;
+            border: 1px solid #ebccd1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>JSON Status Changer</h1>
+        
+        <div class="section">
+            <h2>Version JSON</h2>
+            <p>URL: <code>https://kraken0fficial.github.io/status/free/version.json</code></p>
+            
+            <label for="version">Version:</label>
+            <input type="text" id="version" placeholder="Enter version number">
+            
+            <label for="versionNotes">Release Notes:</label>
+            <textarea id="versionNotes" rows="4" placeholder="Enter release notes"></textarea>
+            
+            <button onclick="updateVersion()">Update Version</button>
+            
+            <div id="versionStatus" class="status"></div>
+            
+            <h3>Current Version JSON:</h3>
+            <div id="versionJsonDisplay" class="json-display">Loading...</div>
+        </div>
+        
+        <div class="section">
+            <h2>Status JSON</h2>
+            <p>URL: <code>https://kraken0fficial.github.io/status/free/status.json</code></p>
+            
+            <label for="status">Status:</label>
+            <select id="status">
+                <option value="online">Online</option>
+                <option value="offline">Offline</option>
+                <option value="maintenance">Maintenance</option>
+            </select>
+            
+            <label for="statusMessage">Status Message:</label>
+            <input type="text" id="statusMessage" placeholder="Enter status message">
+            
+            <button onclick="updateStatus()">Update Status</button>
+            
+            <div id="statusStatus" class="status"></div>
+            
+            <h3>Current Status JSON:</h3>
+            <div id="statusJsonDisplay" class="json-display">Loading...</div>
+        </div>
+    </div>
+
+    <script>
+        // Load current JSON data on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            fetchVersionData();
+            fetchStatusData();
+        });
+
+        // Fetch current version.json data
+        function fetchVersionData() {
+            fetch('https://kraken0fficial.github.io/status/free/version.json')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('versionJsonDisplay').textContent = JSON.stringify(data, null, 2);
+                    document.getElementById('version').value = data.version || '';
+                    document.getElementById('versionNotes').value = data.notes || '';
+                })
+                .catch(error => {
+                    document.getElementById('versionJsonDisplay').textContent = 'Error loading version.json: ' + error.message;
+                });
+        }
+
+        // Fetch current status.json data
+        function fetchStatusData() {
+            fetch('https://kraken0fficial.github.io/status/free/status.json')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('statusJsonDisplay').textContent = JSON.stringify(data, null, 2);
+                    document.getElementById('status').value = data.status || 'online';
+                    document.getElementById('statusMessage').value = data.message || '';
+                })
+                .catch(error => {
+                    document.getElementById('statusJsonDisplay').textContent = 'Error loading status.json: ' + error.message;
+                });
+        }
+
+        // Update version.json
+        function updateVersion() {
+            const version = document.getElementById('version').value;
+            const notes = document.getElementById('versionNotes').value;
+            
+            const versionData = {
+                version: version,
+                notes: notes,
+                timestamp: new Date().toISOString()
+            };
+            
+            // In a real implementation, you would send this to your server to update the file
+            // This is just a simulation
+            document.getElementById('versionJsonDisplay').textContent = JSON.stringify(versionData, null, 2);
+            
+            showStatus('versionStatus', 'Version updated successfully!', true);
+            
+            // Simulate saving (in a real app, you would make an API call to your backend)
+            setTimeout(() => {
+                fetchVersionData();
+            }, 1000);
+        }
+
+        // Update status.json
+        function updateStatus() {
+            const status = document.getElementById('status').value;
+            const message = document.getElementById('statusMessage').value;
+            
+            const statusData = {
+                status: status,
+                message: message,
+                timestamp: new Date().toISOString()
+            };
+            
+            // In a real implementation, you would send this to your server to update the file
+            // This is just a simulation
+            document.getElementById('statusJsonDisplay').textContent = JSON.stringify(statusData, null, 2);
+            
+            showStatus('statusStatus', 'Status updated successfully!', true);
+            
+            // Simulate saving (in a real app, you would make an API call to your backend)
+            setTimeout(() => {
+                fetchStatusData();
+            }, 1000);
+        }
+
+        // Show status message
+        function showStatus(elementId, message, isSuccess) {
+            const element = document.getElementById(elementId);
+            element.textContent = message;
+            element.className = 'status ' + (isSuccess ? 'success' : 'error');
+            element.style.display = 'block';
+            
+            setTimeout(() => {
+                element.style.display = 'none';
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
