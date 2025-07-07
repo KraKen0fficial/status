@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub JSON Editor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            margin: 20px auto;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .status-preview {
+            padding: 10px;
+            border-radius: 4px;
+            text-align: center;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .github-info {
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+            border-left: 4px solid #6c757d;
+        }
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+            border-radius: 4px 4px 0 0;
+        }
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            color: #333;
+            margin: 0;
+            border-radius: 0;
+        }
+        .tab button:hover {
+            background-color: #ddd;
+        }
+        .tab button.active {
+            background-color: #ddd;
+        }
+        .tabcontent {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-top: none;
+            border-radius: 0 0 4px 4px;
+            background-color: white;
+        }
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>GitHub JSON Editor</h1>
+    
+    <div class="tab">
+        <button class="tablinks active" onclick="openTab(event, 'statusTab')">Status.json</button>
+        <button class="tablinks" onclick="openTab(event, 'versionTab')">Version.json</button>
+    </div>
+    
+    <div id="statusTab" class="tabcontent active">
+        <div class="container">
+            <h2>Edit status.json</h2>
+            
+            <div class="form-group">
+                <label for="status">Status:</label>
+                <input type="text" id="status" value="Undetected">
+            </div>
+            
+            <div class="form-group">
+                <label for="statuscolor">Status Color (HEX):</label>
+                <input type="color" id="statuscolor" value="#0c7a00">
+            </div>
+            
+            <div class="form-group">
+                <label for="statusbutton">Status Button:</label>
+                <select id="statusbutton">
+                    <option value="on">On</option>
+                    <option value="off">Off</option>
+                </select>
+            </div>
+            
+            <div class="status-preview" id="statusPreview" style="background-color: #0c7a00; color: white;">
+                Undetected
+            </div>
+            
+            <button onclick="updateStatusJson()">Update status.json</button>
+        </div>
+    </div>
+    
+    <div id="versionTab" class="tabcontent">
+        <div class="container">
+            <h2>Edit version.json</h2>
+            
+            <div class="form-group">
+                <label for="standoffversion">Standoff Version:</label>
+                <input type="text" id="standoffversion" value="0.34.1">
+            </div>
+            
+            <button onclick="updateVersionJson()">Update version.json</button>
+        </div>
+    </div>
+    
+    <div class="github-info">
+        <h3>GitHub Repository Configuration</h3>
+        <div class="form-group">
+            <label for="repoOwner">Repository Owner:</label>
+            <input type="text" id="repoOwner" placeholder="username">
+        </div>
+        <div class="form-group">
+            <label for="repoName">Repository Name:</label>
+            <input type="text" id="repoName" placeholder="repository-name">
+        </div>
+        <div class="form-group">
+            <label for="githubToken">GitHub Personal Access Token:</label>
+            <input type="password" id="githubToken" placeholder="ghp_...">
+            <small>Create a token with "repo" permissions at GitHub Settings > Developer settings</small>
+        </div>
+        <button onclick="saveGithubConfig()">Save GitHub Configuration</button>
+    </div>
+
+    <script>
+        // Tab functionality
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].className = tabcontent[i].className.replace(" active", "");
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).className += " active";
+            evt.currentTarget.className += " active";
+        }
+
+        // Load saved GitHub config from localStorage
+        function loadGithubConfig() {
+            const repoOwner = localStorage.getItem('repoOwner');
+            const repoName = localStorage.getItem('repoName');
+            const githubToken = localStorage.getItem('githubToken');
+            
+            if (repoOwner) document.getElementById('repoOwner').value = repoOwner;
+            if (repoName) document.getElementById('repoName').value = repoName;
+            if (githubToken) document.getElementById('githubToken').value = githubToken;
+        }
+
+        // Save GitHub config to localStorage
+        function saveGithubConfig() {
+            const repoOwner = document.getElementById('repoOwner').value;
+            const repoName = document.getElementById('repoName').value;
+            const githubToken = document.getElementById('githubToken').value;
+            
+            localStorage.setItem('repoOwner', repoOwner);
+            localStorage.setItem('repoName', repoName);
+            localStorage.setItem('githubToken', githubToken);
+            
+            alert('GitHub configuration saved!');
+        }
+
+        // Update status preview when inputs change
+        document.getElementById('status').addEventListener('input', updateStatusPreview);
+        document.getElementById('statuscolor').addEventListener('input', updateStatusPreview);
+        
+        function updateStatusPreview() {
+            const status = document.getElementById('status').value;
+            const color = document.getElementById('statuscolor').value;
+            
+            const preview = document.getElementById('statusPreview');
+            preview.textContent = status;
+            preview.style.backgroundColor = color;
+            
+            // Choose text color based on background brightness
+            const brightness = getColorBrightness(color);
+            preview.style.color = brightness > 130 ? 'black' : 'white';
+        }
+        
+        function getColorBrightness(hexColor) {
+            // Convert hex to RGB
+            const r = parseInt(hexColor.substr(1, 2), 16);
+            const g = parseInt(hexColor.substr(3, 2), 16);
+            const b = parseInt(hexColor.substr(5, 2), 16);
+            
+            // Calculate brightness (perceived luminance)
+            return (r * 299 + g * 587 + b * 114) / 1000;
+        }
+
+        // Update status.json on GitHub
+        async function updateStatusJson() {
+            const repoOwner = document.getElementById('repoOwner').value;
+            const repoName = document.getElementById('repoName').value;
+            const githubToken = document.getElementById('githubToken').value;
+            
+            if (!repoOwner || !repoName || !githubToken) {
+                alert('Please configure GitHub repository settings first');
+                return;
+            }
+            
+            const status = document.getElementById('status').value;
+            const statuscolor = document.getElementById('statuscolor').value;
+            const statusbutton = document.getElementById('statusbutton').value;
+            
+            const jsonData = {
+                status: status,
+                statuscolor: statuscolor,
+                statusbutton: statusbutton
+            };
+            
+            try {
+                const response = await updateGitHubFile(
+                    repoOwner, 
+                    repoName, 
+                    'status.json', 
+                    JSON.stringify(jsonData, null, 2),
+                    githubToken
+                );
+                
+                alert('status.json updated successfully!');
+                console.log('Update response:', response);
+            } catch (error) {
+                alert('Error updating status.json: ' + error.message);
+                console.error('Update error:', error);
+            }
+        }
+
+        // Update version.json on GitHub
+        async function updateVersionJson() {
+            const repoOwner = document.getElementById('repoOwner').value;
+            const repoName = document.getElementById('repoName').value;
+            const githubToken = document.getElementById('githubToken').value;
+            
+            if (!repoOwner || !repoName || !githubToken) {
+                alert('Please configure GitHub repository settings first');
+                return;
+            }
+            
+            const standoffversion = document.getElementById('standoffversion').value;
+            
+            const jsonData = {
+                standoffversion: standoffversion
+            };
+            
+            try {
+                const response = await updateGitHubFile(
+                    repoOwner, 
+                    repoName, 
+                    'version.json', 
+                    JSON.stringify(jsonData, null, 2),
+                    githubToken
+                );
+                
+                alert('version.json updated successfully!');
+                console.log('Update response:', response);
+            } catch (error) {
+                alert('Error updating version.json: ' + error.message);
+                console.error('Update error:', error);
+            }
+        }
+
+        // Generic function to update a file on GitHub
+        async function updateGitHubFile(owner, repo, path, content, token) {
+            // First, get the current SHA of the file (needed for update)
+            const getUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
+            const getResponse = await fetch(getUrl, {
+                headers: {
+                    'Authorization': `token ${token}`,
+                    'Accept': 'application/vnd.github.v3+json'
+                }
+            });
+            
+            if (!getResponse.ok) {
+                throw new Error(`Failed to get file: ${getResponse.status} ${getResponse.statusText}`);
+            }
+            
+            const fileData = await getResponse.json();
+            const sha = fileData.sha;
+            
+            // Now update the file
+            const updateUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
+            const updateResponse = await fetch(updateUrl, {
+                method: 'PUT',
+                headers: {
+                    'Authorization': `token ${token}`,
+                    'Accept': 'application/vnd.github.v3+json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    message: `Update ${path}`,
+                    content: btoa(unescape(encodeURIComponent(content))),
+                    sha: sha
+                })
+            });
+            
+            if (!updateResponse.ok) {
+                const errorData = await updateResponse.json();
+                throw new Error(errorData.message || 'Failed to update file');
+            }
+            
+            return await updateResponse.json();
+        }
+
+        // Initialize the page
+        window.onload = function() {
+            loadGithubConfig();
+            updateStatusPreview();
+        };
+    </script>
+</body>
+</html>
