@@ -1,5 +1,5 @@
 {
-  "status": "Undetected",
-  "statuscolor": "#0c7a00",
+  "status": "Detected",
+  "statuscolor": "#fa0000",
   "statusbutton": "on"
 }
