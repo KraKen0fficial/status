@@ -1,3 +1,5 @@
 {
-  "standoffversion": "0.34.1",
+    "standoffversion": "0.34.1",
+    "launcherversion": "0.1",
+    "launcherdownloadurl": "https://example.com/downloads/exworium.exe"
 }
