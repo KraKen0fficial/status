@@ -2,7 +2,7 @@
   "application_settings": {
     "name": "exworiumloader",
     "version": "0.2",
-    "is_active": false,
+    "is_active": true,
     "shutdown_message": "Приложение отключено! Технические работы."
   }
 }
