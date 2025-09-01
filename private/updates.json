@@ -1,14 +1,12 @@
 [
-  {
-    "id": 1,
-    "title": "Update 1",
-    "date": "2025-09-01",
-    "description": "First update description."
-  },
-  {
-    "id": 2,
-    "title": "Update 2",
-    "date": "2025-09-02",
-    "description": "Second update description."
-  }
+    {
+        "Title": "Update 1.0",
+        "Date": "2025-09-01",
+        "Description": "Initial release with new features"
+    },
+    {
+        "Title": "Update 1.1",
+        "Date": "2025-09-02",
+        "Description": "Bug fixes and improvements"
+    }
 ]
