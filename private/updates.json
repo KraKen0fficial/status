@@ -1,7 +1,20 @@
-[
+{
+  "status": {
+    "Status": "Detect",
+    "Game": "Standoff 2",
+    "Version": "1.0.0",
+    "Color": "#FF0000"
+  },
+  "updates": [
     {
-        "Title": "Update 0.1",
-        "Date": "01.09.2025",
-        "Description": "Блять.. Опять в школу\nНу тип приват вышел :)"
+      "Title": "Update 1.0",
+      "Date": "2025-09-01",
+      "Description": "Initial release with new features.\nThis includes improved UI and performance."
+    },
+    {
+      "Title": "Update 1.1",
+      "Date": "2025-09-02",
+      "Description": "Bug fixes and improvements.\n- Fixed login issues\n- Enhanced security"
     }
-]
+  ]
+}
