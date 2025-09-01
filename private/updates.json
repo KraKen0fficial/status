@@ -1,10 +1,4 @@
 {
-  "status": {
-    "Status": "Detect",
-    "Game": "Standoff 2",
-    "Version": "1.0.0",
-    "Color": "#FF0000"
-  },
   "updates": [
     {
       "Title": "Update 1.0",
