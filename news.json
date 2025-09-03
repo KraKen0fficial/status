@@ -1,20 +1,24 @@
 {
+  "success": true,
+  "message": "",
   "news": [
     {
-      "id": 1,
-      "title": "Обновление до версии 2.0",
-      "image": "https://yourhosting.com/news/images/update_v2.jpg",
-      "content": "Мы выпустили крупное обновление с новым интерфейсом и улучшенной производительностью.",
-      "date": "2023-05-15",
-      "isImportant": true
+      "title": "Обновление версии 2.0",
+      "content": "Добавлена поддержка новых игр и улучшена производительность. Теперь доступна система скинов и кастомизации интерфейса.",
+      "imageUrl": "https://raw.githubusercontent.com/yourusername/yourrepo/main/images/update_v2.png",
+      "date": "2023-10-15T10:30:00"
     },
     {
-      "id": 2,
-      "title": "Новые игры добавлены",
-      "image": "https://yourhosting.com/news/images/new_games.jpg",
-      "content": "В загрузчик добавлены 5 новых игр, включая популярные новинки.",
-      "date": "2023-05-10",
-      "isImportant": false
+      "title": "Новый режим игры",
+      "content": "Добавлен эксклюзивный режим для премиум пользователей с улучшенными возможностями.",
+      "imageUrl": "https://raw.githubusercontent.com/yourusername/yourrepo/main/images/new_mode.png",
+      "date": "2023-10-10T14:45:00"
+    },
+    {
+      "title": "Исправление ошибок",
+      "content": "Исправлены критические ошибки в системе загрузки. Теперь процесс стал стабильнее и быстрее.",
+      "imageUrl": "https://raw.githubusercontent.com/yourusername/yourrepo/main/images/bug_fix.png",
+      "date": "2023-10-05T09:15:00"
     }
   ]
 }
