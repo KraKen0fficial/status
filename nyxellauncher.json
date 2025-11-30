@@ -17,6 +17,12 @@
       "Description": "Новое приключение Геральта",
       "ImageUrl": "https://raw.githubusercontent.com/yourusername/yourrepo/main/images/witcher4.jpg",
       "DownloadUrl": "https://example.com/download/witcher4"
+    },
+     {
+      "Title": "standoff2",
+      "Description": "Футуристический экшен RPG",
+      "ImageUrl": "https://raw.githubusercontent.com/yourusername/yourrepo/main/images/cyberpunk.jpg",
+      "DownloadUrl": "https://example.com/download/cyberpunk"
     }
   ]
 }
