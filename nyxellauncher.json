@@ -1,14 +1,22 @@
-[
-  {
-    "Title": "Visual Studio",
-    "ImagePath": "https://upload.wikimedia.org/wikipedia/commons/5/59/Visual_Studio_2019_logo.svg",
-    "ExePath": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\devenv.exe",
-    "Arguments": ""
-  },
-  {
-    "Title": "Google Chrome",
-    "ImagePath": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Google_Chrome_icon_%28February_2022%29.svg",
-    "ExePath": "chrome.exe",
-    "Arguments": "github.com"
-  }
-]
+{
+  "Games": [
+    {
+      "Title": "Grand Theft Auto VI",
+      "Description": "GTA6 уже вышла?",
+      "ImageUrl": "https://raw.githubusercontent.com/yourusername/yourrepo/main/images/gta6.jpg",
+      "DownloadUrl": "https://example.com/download/gta6"
+    },
+    {
+      "Title": "Cyberpunk 2077",
+      "Description": "Футуристический экшен RPG",
+      "ImageUrl": "https://raw.githubusercontent.com/yourusername/yourrepo/main/images/cyberpunk.jpg",
+      "DownloadUrl": "https://example.com/download/cyberpunk"
+    },
+    {
+      "Title": "The Witcher 4",
+      "Description": "Новое приключение Геральта",
+      "ImageUrl": "https://raw.githubusercontent.com/yourusername/yourrepo/main/images/witcher4.jpg",
+      "DownloadUrl": "https://example.com/download/witcher4"
+    }
+  ]
+}
