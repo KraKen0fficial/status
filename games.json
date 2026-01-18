@@ -1,34 +1,42 @@
 {
-  "games": [
+  "version": "1.0",
+  "lastUpdated": "2026-01-18T10:00:00Z",
+  "programs": [
     {
-      "id": "game1",
-      "title": "Cyber Adventure",
-      "genre": "Экшен",
-      "description": "Захватывающее приключение в киберпанк мире",
-      "image": "https://www.film.ru/sites/default/files/images/60aac1580cb84.jpeg",
-      "screenshots": [
-        "https://avatars.mds.yandex.net/get-mpic/16111726/2a0000019a96b56f16e41072e15e761f537a/orig",
-        "https://www.film.ru/sites/default/files/images/60aac1580cb84.jpeg"
-      ],
-      "downloadUrl": "/downloads/game1.exe",
-      "size": "15.2 ГБ",
-      "version": "1.0.0",
-      "updatedAt": "2024-01-15"
+      "id": "program-1",
+      "name": "VS Code",
+      "description": "Code editor with powerful features",
+      "path": "C:\\Users\\YourUser\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe",
+      "icon": "💻",
+      "image": "https://example.com/vscode-banner.png",
+      "category": "Development"
     },
     {
-      "id": "game2",
-      "title": "Space Strategy",
-      "genre": "Стратегия",
-      "description": "Космическая стратегия с элементами RPG",
-      "image": "https://avatars.mds.yandex.net/get-mpic/16111726/2a0000019a96b56f16e41072e15e761f537a/orig",
-      "screenshots": [
-        "https://avatars.mds.yandex.net/get-mpic/16111726/2a0000019a96b56f16e41072e15e761f537a/orig",
-        "https://www.film.ru/sites/default/files/images/60aac1580cb84.jpeg"
-      ],
-      "downloadUrl": "/downloads/game2.exe",
-      "size": "8.7 ГБ",
-      "version": "2.1.0",
-      "updatedAt": "2024-01-10"
+      "id": "program-2",
+      "name": "Photoshop",
+      "description": "Professional image editing software",
+      "path": "C:\\Program Files\\Adobe\\Adobe Photoshop 2024\\Photoshop.exe",
+      "icon": "🎨",
+      "image": "https://example.com/photoshop-banner.jpg",
+      "category": "Design"
+    },
+    {
+      "id": "program-3",
+      "name": "Steam",
+      "description": "Gaming platform and store",
+      "path": "C:\\Program Files (x86)\\Steam\\steam.exe",
+      "icon": "🎮",
+      "image": "https://example.com/steam-banner.jpg",
+      "category": "Gaming"
+    },
+    {
+      "id": "program-4",
+      "name": "Discord",
+      "description": "Voice, video and text communication",
+      "path": "C:\\Users\\YourUser\\AppData\\Local\\Discord\\app-1.0.9016\\Discord.exe",
+      "icon": "💬",
+      "image": "https://example.com/discord-banner.png",
+      "category": "Communication"
     }
   ]
 }
