@@ -6,7 +6,10 @@
       "genre": "Экшен",
       "description": "Захватывающее приключение в киберпанк мире",
       "image": "https://www.film.ru/sites/default/files/images/60aac1580cb84.jpeg",
-      "screenshots": ["https://avatars.mds.yandex.net/get-mpic/16111726/2a0000019a96b56f16e41072e15e761f537a/orig", "https://www.film.ru/sites/default/files/images/60aac1580cb84.jpeg"],
+      "screenshots": [
+        "https://avatars.mds.yandex.net/get-mpic/16111726/2a0000019a96b56f16e41072e15e761f537a/orig",
+        "https://www.film.ru/sites/default/files/images/60aac1580cb84.jpeg"
+      ],
       "downloadUrl": "/downloads/game1.exe",
       "size": "15.2 ГБ",
       "version": "1.0.0",
@@ -18,7 +21,10 @@
       "genre": "Стратегия",
       "description": "Космическая стратегия с элементами RPG",
       "image": "https://avatars.mds.yandex.net/get-mpic/16111726/2a0000019a96b56f16e41072e15e761f537a/orig",
-      "screenshots": ["https://avatars.mds.yandex.net/get-mpic/16111726/2a0000019a96b56f16e41072e15e761f537a/orig", "https://www.film.ru/sites/default/files/images/60aac1580cb84.jpeg"],
+      "screenshots": [
+        "https://avatars.mds.yandex.net/get-mpic/16111726/2a0000019a96b56f16e41072e15e761f537a/orig",
+        "https://www.film.ru/sites/default/files/images/60aac1580cb84.jpeg"
+      ],
       "downloadUrl": "/downloads/game2.exe",
       "size": "8.7 ГБ",
       "version": "2.1.0",
