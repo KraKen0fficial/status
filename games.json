@@ -1,0 +1,28 @@
+{
+  "games": [
+    {
+      "id": "game1",
+      "title": "Cyber Adventure",
+      "genre": "Экшен",
+      "description": "Захватывающее приключение в киберпанк мире",
+      "image": "/images/game1.jpg",
+      "screenshots": ["/screenshots/game1_1.jpg", "/screenshots/game1_2.jpg"],
+      "downloadUrl": "/downloads/game1.exe",
+      "size": "15.2 ГБ",
+      "version": "1.0.0",
+      "updatedAt": "2024-01-15"
+    },
+    {
+      "id": "game2",
+      "title": "Space Strategy",
+      "genre": "Стратегия",
+      "description": "Космическая стратегия с элементами RPG",
+      "image": "/images/game2.jpg",
+      "screenshots": ["/screenshots/game2_1.jpg", "/screenshots/game2_2.jpg"],
+      "downloadUrl": "/downloads/game2.exe",
+      "size": "8.7 ГБ",
+      "version": "2.1.0",
+      "updatedAt": "2024-01-10"
+    }
+  ]
+}
