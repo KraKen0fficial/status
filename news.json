@@ -1,42 +1,52 @@
 {
-  "version": "1.0",
-  "lastUpdated": "2026-01-18T10:00:00Z",
-  "programs": [
+  "news": [
     {
-      "id": "program-1",
-      "name": "VS Code",
-      "description": "Code editor with powerful features",
-      "path": "C:\\Users\\YourUser\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe",
-      "icon": "💻",
-      "image": "https://example.com/vscode-banner.png",
-      "category": "Development"
+      "title": {
+        "en": "Hytale Alpha 1.0 Released",
+        "ru": "Hytale Alpha 1.0 выпущена"
+      },
+      "date": "2026-01-15",
+      "content": {
+        "en": "The first alpha version of Hytale is now available to all players! This update includes new biomes, creatures, and gameplay mechanics. Download now from the official website.",
+        "ru": "Первая альфа-версия Hytale теперь доступна всем игрокам! Это обновление включает новые биомы, существ и игровые механики. Скачайте сейчас с официального сайта."
+      },
+      "source": "https://hytale.com/news/alpha-1-0"
     },
     {
-      "id": "program-2",
-      "name": "Photoshop",
-      "description": "Professional image editing software",
-      "path": "C:\\Program Files\\Adobe\\Adobe Photoshop 2024\\Photoshop.exe",
-      "icon": "🎨",
-      "image": "https://example.com/photoshop-banner.jpg",
-      "category": "Design"
+      "title": {
+        "en": "Server Maintenance Complete",
+        "ru": "Техническое обслуживание серверов завершено"
+      },
+      "date": "2026-01-10",
+      "content": {
+        "en": "Scheduled maintenance has been completed successfully. All servers are now back online with improved performance and stability.",
+        "ru": "Запланированное техническое обслуживание успешно завершено. Все серверы теперь работают с улучшенной производительностью и стабильностью."
+      },
+      "source": "none"
     },
     {
-      "id": "program-3",
-      "name": "Steam",
-      "description": "Gaming platform and store",
-      "path": "C:\\Program Files (x86)\\Steam\\steam.exe",
-      "icon": "🎮",
-      "image": "https://example.com/steam-banner.jpg",
-      "category": "Gaming"
+      "title": {
+        "en": "New Modding API Available",
+        "ru": "Доступен новый API для модификаций"
+      },
+      "date": "2026-01-05",
+      "content": {
+        "en": "Developers can now access the new modding API to create custom content for Hytale. Documentation and SDK available on GitHub.",
+        "ru": "Разработчики теперь могут получить доступ к новому API для модификаций, чтобы создавать пользовательский контент для Hytale. Документация и SDK доступны на GitHub."
+      },
+      "source": "https://github.com/hytale/api-docs"
     },
     {
-      "id": "program-4",
-      "name": "Discord",
-      "description": "Voice, video and text communication",
-      "path": "C:\\Users\\YourUser\\AppData\\Local\\Discord\\app-1.0.9016\\Discord.exe",
-      "icon": "💬",
-      "image": "https://example.com/discord-banner.png",
-      "category": "Communication"
+      "title": {
+        "en": "Community Event: Build Contest",
+        "ru": "Событие сообщества: Конкурс постройки"
+      },
+      "date": "2026-01-01",
+      "content": {
+        "en": "Join our first community build contest! Show off your creativity and win exclusive in-game items. Submissions open until January 31.",
+        "ru": "Присоединяйтесь к нашему первому конкурсу постройки сообщества! Покажите свою креативность и выиграйте эксклюзивные игровые предметы. Подача работ открыта до 31 января."
+      },
+      "source": "https://hytale.com/community/build-contest"
     }
   ]
 }
