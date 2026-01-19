@@ -11,18 +11,6 @@
         "ru": "Hytale Launcher теперь доступен с улучшенными функциями, включая обновления новостей, управление настройками и бесшовный запуск игры. Оставайтесь на связи для получения обновлений!"
       },
       "source": "https://hytale.com"
-    },
-    {
-      "title": {
-        "en": "New Features Added",
-        "ru": "Добавлены новые функции"
-      },
-      "date": "2026-01-18",
-      "content": {
-        "en": "We've added support for multiple languages, theme switching, and improved news fetching. The launcher now provides a better user experience with faster loading times.",
-        "ru": "Мы добавили поддержку нескольких языков, переключение тем и улучшенную загрузку новостей. Лаунчер теперь обеспечивает лучший пользовательский опыт с более быстрым временем загрузки."
-      },
-      "source": "https://github.com/hytale-launcher"
     }
   ]
 }
