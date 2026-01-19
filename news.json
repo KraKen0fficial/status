@@ -2,15 +2,27 @@
   "news": [
     {
       "title": {
-        "en": "Nyxel Launcher Now in Beta",
-        "ru": "Nyxel Launcher теперь в бета-версии"
+        "en": "Welcome to Hytale Launcher",
+        "ru": "Добро пожаловать в Hytale Launcher"
       },
       "date": "2026-01-19",
       "content": {
-        "en": "We're excited to announce that Nyxel Launcher has entered Beta phase! Experience faster downloads, seamless game management, and early access features. Join our beta community and help shape the future of gaming.",
-        "ru": "Мы рады сообщить, что Nyxel Launcher перешёл в бета-фазу! Оцените быстрые загрузки, удобное управление играми и ранний доступ к функциям. Присоединяйтесь к нашему бета-сообществу и помогите формировать будущее игр."
+        "en": "The Hytale Launcher is now available with enhanced features including news updates, settings management, and seamless game launching. Stay tuned for more updates!",
+        "ru": "Hytale Launcher теперь доступен с улучшенными функциями, включая обновления новостей, управление настройками и бесшовный запуск игры. Оставайтесь на связи для получения обновлений!"
       },
-      "source": "https://nyxel.com/beta",
+      "source": "https://hytale.com"
+    },
+    {
+      "title": {
+        "en": "New Features Added",
+        "ru": "Добавлены новые функции"
+      },
+      "date": "2026-01-18",
+      "content": {
+        "en": "We've added support for multiple languages, theme switching, and improved news fetching. The launcher now provides a better user experience with faster loading times.",
+        "ru": "Мы добавили поддержку нескольких языков, переключение тем и улучшенную загрузку новостей. Лаунчер теперь обеспечивает лучший пользовательский опыт с более быстрым временем загрузки."
+      },
+      "source": "https://github.com/hytale-launcher"
     }
   ]
 }
