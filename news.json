@@ -2,51 +2,15 @@
   "news": [
     {
       "title": {
-        "en": "Hytale Alpha 1.0 Released",
-        "ru": "Hytale Alpha 1.0 выпущена"
+        "en": "Nyxel Launcher Now in Beta",
+        "ru": "Nyxel Launcher теперь в бета-версии"
       },
-      "date": "2026-01-15",
+      "date": "2026-01-19",
       "content": {
-        "en": "The first alpha version of Hytale is now available to all players! This update includes new biomes, creatures, and gameplay mechanics. Download now from the official website.",
-        "ru": "Первая альфа-версия Hytale теперь доступна всем игрокам! Это обновление включает новые биомы, существ и игровые механики. Скачайте сейчас с официального сайта."
+        "en": "We're excited to announce that Nyxel Launcher has entered Beta phase! Experience faster downloads, seamless game management, and early access features. Join our beta community and help shape the future of gaming.",
+        "ru": "Мы рады сообщить, что Nyxel Launcher перешёл в бета-фазу! Оцените быстрые загрузки, удобное управление играми и ранний доступ к функциям. Присоединяйтесь к нашему бета-сообществу и помогите формировать будущее игр."
       },
-      "source": "https://hytale.com/news/alpha-1-0"
-    },
-    {
-      "title": {
-        "en": "Server Maintenance Complete",
-        "ru": "Техническое обслуживание серверов завершено"
-      },
-      "date": "2026-01-10",
-      "content": {
-        "en": "Scheduled maintenance has been completed successfully. All servers are now back online with improved performance and stability.",
-        "ru": "Запланированное техническое обслуживание успешно завершено. Все серверы теперь работают с улучшенной производительностью и стабильностью."
-      },
-      "source": "none"
-    },
-    {
-      "title": {
-        "en": "New Modding API Available",
-        "ru": "Доступен новый API для модификаций"
-      },
-      "date": "2026-01-05",
-      "content": {
-        "en": "Developers can now access the new modding API to create custom content for Hytale. Documentation and SDK available on GitHub.",
-        "ru": "Разработчики теперь могут получить доступ к новому API для модификаций, чтобы создавать пользовательский контент для Hytale. Документация и SDK доступны на GitHub."
-      },
-      "source": "https://github.com/hytale/api-docs"
-    },
-    {
-      "title": {
-        "en": "Community Event: Build Contest",
-        "ru": "Событие сообщества: Конкурс постройки"
-      },
-      "date": "2026-01-01",
-      "content": {
-        "en": "Join our first community build contest! Show off your creativity and win exclusive in-game items. Submissions open until January 31.",
-        "ru": "Присоединяйтесь к нашему первому конкурсу постройки сообщества! Покажите свою креативность и выиграйте эксклюзивные игровые предметы. Подача работ открыта до 31 января."
-      },
-      "source": "https://hytale.com/community/build-contest"
+      "source": "https://nyxel.com/beta",
     }
   ]
 }
