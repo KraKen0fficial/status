@@ -5,11 +5,11 @@
       "name": "Steam",
       "description": "Steam — превосходная платформа для игроков и разработчиков.",
       "version": "1.0.0",
-      "file_url": "https://kraken0fficial.github.io/status/app/SteamSetup.exe",
+      "file_url": "https://kraken0fficial.github.io/status/apps/SteamSetup.zip",
       "icon_url": "https://static0.makeuseofimages.com/wordpress/wp-content/uploads/2022/10/Steam-logo.jpg?q=50&fit=crop&w=749&dpr=1.5",
       "category": "Apps",
       "size": 2.3,
-      "requires_unzip": false
+      "requires_unzip": true
     }
   ]
 }
