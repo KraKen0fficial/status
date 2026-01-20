@@ -1,0 +1,15 @@
+{
+  "apps": [
+    {
+      "id": 1,
+      "name": "Steam",
+      "description": "Application Description",
+      "version": "1.0.0",
+      "file_url": "https://your-hosting/files/app1.zip",
+      "icon_url": "https://www.gamingonlinux.com/uploads/tagline_gallery/steamos-2025.jpg",
+      "category": "Apps",
+      "size": 2,3 MB,
+      "requires_unzip": false
+    }
+  ]
+}
