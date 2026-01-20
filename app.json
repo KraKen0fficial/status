@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Steam",
-      "description": "Application Description",
+      "description": "Steam — превосходная платформа для игроков и разработчиков.",
       "version": "1.0.0",
       "file_url": "https://cdn.akamai.steamstatic.com/client/installer/SteamSetup.exe",
       "icon_url": "https://www.gamingonlinux.com/uploads/tagline_gallery/steamos-2025.jpg",
