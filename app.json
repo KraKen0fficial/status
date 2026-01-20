@@ -8,7 +8,7 @@
       "file_url": "https://cdn.akamai.steamstatic.com/client/installer/SteamSetup.exe",
       "icon_url": "https://www.gamingonlinux.com/uploads/tagline_gallery/steamos-2025.jpg",
       "category": "Apps",
-      "size": 2,3,
+      "size": 2.3,
       "requires_unzip": false
     }
   ]
