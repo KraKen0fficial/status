@@ -2,10 +2,22 @@
   "apps": [
     {
       "id": 1,
-      "name": "Steam",
+      "name": "Steam .zip",
       "description": "Steam — превосходная платформа для игроков и разработчиков.",
       "version": "1.0.0",
       "file_url": "https://kraken0fficial.github.io/status/apps/SteamSetup.zip",
+      "icon_url": "https://static0.makeuseofimages.com/wordpress/wp-content/uploads/2022/10/Steam-logo.jpg?q=50&fit=crop&w=749&dpr=1.5",
+      "category": "Apps",
+      "size": 2.3,
+      "requires_unzip": true
+    }
+  ],
+      {
+      "id": 2,
+      "name": "Steam .exe",
+      "description": "Steam — превосходная платформа для игроков и разработчиков.",
+      "version": "1.0.0",
+      "file_url": "https://kraken0fficial.github.io/status/apps/SteamSetup.exe",
       "icon_url": "https://static0.makeuseofimages.com/wordpress/wp-content/uploads/2022/10/Steam-logo.jpg?q=50&fit=crop&w=749&dpr=1.5",
       "category": "Apps",
       "size": 2.3,
