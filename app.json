@@ -10,9 +10,8 @@
       "category": "Apps",
       "size": 2.3,
       "requires_unzip": true
-    }
-  ],
-      {
+    },
+    {
       "id": 2,
       "name": "Steam .exe",
       "description": "Steam — превосходная платформа для игроков и разработчиков.",
